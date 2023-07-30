@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flight Search</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tarekraafat-autocomplete.js/10.2.7/autoComplete.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.7/dist/css/autoComplete.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Find the Best Flights</h1>
+    </header>
+    
+    <p id="output"></p>
+    <main>
+        <div class="container">
+            <label for="to">From:</label>
+            <input type="text" list="fromOptions" id="from" placeholder="Departure Airport" >
+            <datalist id="fromOptions"></datalist>
+
+            <label for="to">To:</label>
+            <input type="text" list="toOptions" id="to" placeholder="Destination Airport">
+            <datalist id="toOptions"></datalist>
+
+            <label for="duration">Duration (Nights):</label>
+            <input type="number" id="duration" name="duration" min="1" placeholder="Number of Nights">
+
+            <button onclick="search_flight()">Search</button>
+        </div>
+    </main>
+
+    <script src="script.js"> </script>
+</body>
+
+</html>
